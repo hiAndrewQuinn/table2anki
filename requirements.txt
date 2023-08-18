@@ -1,0 +1,15 @@
+beautifulsoup4==4.12.2
+bs4==0.0.1
+cached-property==1.5.2
+certifi==2023.7.22
+charset-normalizer==3.2.0
+chevron==0.14.0
+click==8.1.7
+colorlog==6.7.0
+frozendict==2.3.8
+genanki==0.13.0
+idna==3.4
+PyYAML==6.0.1
+requests==2.31.0
+soupsieve==2.4.1
+urllib3==2.0.4
