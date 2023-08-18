@@ -1,7 +1,7 @@
 `table2anki` - turn HTML tables into Anki card packages
 ------------------------------------------------------------
 
-# Quickstart
+## Quickstart
 
 ```bash
 $ python cli.py --help
@@ -19,7 +19,12 @@ Options:
   --help         Show this message and exit.
 ```
 
-# Example
+
+## Introduction
+
+`table2anki` is a tool designed to help Anki users swiftly convert tables from HTML sources into Anki decks. Whether you have a table in an HTML file, a raw HTML string, or a webpage, `table2anki` can process it and generate an Anki package ready for import.
+
+## Example
 
 Say you want to measure the mnemonic major system. You find this table at 
 [https://major-system.info/en/](https://major-system.info/en/):
@@ -71,3 +76,51 @@ If you import `output.apkg` to Anki, a new deck will appear with two fields,
 `Digit` and `Letter`. No other CSS or formatting will be applied, but that's
 okay -- the bulk import is the hard part. You can do that yourself, however you wish!
 
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your_username/table2anki.git
+```
+
+2. Navigate to the cloned directory:
+```bash
+cd table2anki
+```
+
+3. Install the required packages:
+```bash
+pip install -r requirements.txt
+```
+
+## Detailed Usage
+
+To use `table2anki`, run the `cli.py` script with the desired options. For example, to convert an HTML file to an Anki deck:
+
+```bash
+python cli.py --file path_to_html_file.html
+```
+
+Or, to fetch tables from a URL:
+
+```bash
+python cli.py --url "https://example.com/table_page"
+```
+
+For more detailed usage instructions and options, refer to the Quickstart section or use the `--help` flag.
+
+## Features
+
+- Convert tables from raw HTML strings.
+- Process tables from HTML files.
+- Fetch and convert tables directly from URLs.
+- Verbose logging for detailed insights.
+- +Customize output Anki deck filename.+
+
+## Contributing
+
+Contributions are welcome! Please submit pull requests or open issues to discuss potential changes or additions.
+
+## License
+
+This project is licensed under CC0. Do with it what you will!
