@@ -26,11 +26,6 @@ def setup_logging():
 setup_logging()
 logger = logging.getLogger()  # Get the root logger
 
-# Test logging
-logger.debug("This is a debug log.")
-logger.info("This is an info log.")
-logger.warning("This is a warning log.")
-
 
 def parse_html_table(html_str):
     """
@@ -102,7 +97,7 @@ def generate_anki_model(table_name):
             {
                 "name": "Card 1",
                 "qfmt": "<br>".join([f"{{{{{name}}}}}" for name in table_name]),
-                "afmt": f'{{{{FrontSide}}}}<hr id="answer">{"".join([f"{{{{{name}}}}}" for name in table_name])}',
+                "afmt": f'{{{{FrontSide}}}}<hr id="answer">{"<br>".join([f"{{{{{name}}}}}" for name in table_name])}',
             },
         ],
     )
@@ -129,6 +124,7 @@ def save_to_anki_deck(tables, output_filename="output.apkg"):
 
     package = genanki.Package(deck)
     package.write_to_file(output_filename)
+
 
 if __name__ == "__main__":
     # Sample tables for demonstration purposes
