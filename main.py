@@ -29,7 +29,7 @@ logger = logging.getLogger()  # Get the root logger
 
 def parse_html_table(html_str):
     """
-    Parse HTML table and extract its data as well as headers.
+    Parse HTML table and extract its data as well as headers while retaining the inner HTML.
 
     Parameters:
     - html_str (str): The HTML string containing the table.
@@ -47,7 +47,10 @@ def parse_html_table(html_str):
         rows = table.find_all("tr")
         for i, row in enumerate(rows):
             cells = row.find_all(["th", "td"])
-            row_data = [cell.get_text(strip=True) for cell in cells]
+            # Extracting the inner HTML of each cell
+            row_data = [
+                str(cell.contents[0]) if cell.contents else "" for cell in cells
+            ]
             if i == 0:  # Assuming the first row contains headers
                 headers = row_data
             else:
