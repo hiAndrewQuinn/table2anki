@@ -10,6 +10,6 @@ frozendict==2.3.8
 genanki==0.13.0
 idna==3.4
 PyYAML==6.0.1
-requests==2.31.0
+requests==2.32.0
 soupsieve==2.4.1
 urllib3==2.0.7
